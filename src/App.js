@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CheeseList from './components/cheese-list';
+import { connect } from 'react-redux';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
+	render() {
+		return (
+			<div className="App">
+				<header className="App-header">
+					<img src={logo} className="App-logo" alt="logo" />
+					<h1 className="App-title">Welcome to React</h1>
+				</header>
+				<p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+				</p>
+				<CheeseList/>
+			</div>
+		);
+	}
 }
 
-export default App;
+export default connect()(App);
