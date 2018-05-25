@@ -6,6 +6,9 @@
 # testing
 /coverage
 
+# netlify
+.netlify
+
 # production
 /build
 
